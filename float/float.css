@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: rgba(128, 128, 128, 0.4 );
+}
+
+.div1, .div2, .div3, .div4, 
+.div5, .div6, .div7, .div8,
+.div9, .div10, .div11, .div12,
+.div13, .div14, .div15, .div16,
+.div17{
+    height: 100px;
+    background: rgba(0, 128, 128, 0.8);
+    margin-bottom: 8rem;
+}
+.div1, .div2, .div3, .div4 {
+    margin-bottom: 3rem;
+}
+
+.left1, .left2, .left3, .left4, 
+.left5, .left6, .left7, .left8,
+.left9, .left10, .left11, .left12,
+.left13, .left14, .left15, .left16,
+.left17{
+    font-size: 1.5rem;
+    width: 30%;
+    height: 80px;
+    color: maroon;
+    background: rgba(172, 255, 47, 0.5);
+}
+
+.right1, .right2, .right3, .right4, 
+.right5, .right6, .right7, .right8,
+.right9, .right10, .right11, .right12,
+.right13, .right14, .right15, .right16,
+.right17{
+    font-size: 1.5rem;
+    height: 50px;
+    width: 60%;
+    color: black;
+    background: rgba(255, 127, 80, 0.5);
+}
+
+.left2, .left4, .left5, .left6, .left7, 
+.left8, .left13, .left14, .left15, .left16, .right17{
+    float: left;
+}
+ 
+.right3, .right4, .right9, .right10, .right11, .right12, .right13, .right14, .right15, .right16, .left17{
+    float: right;
+}
+
+p{
+    color: navy;
+    font-weight: 500;
+}
+
+.div6 p, .div10 p, .div14 p{
+    clear: left;
+}
+.div7 p, .div11 p, .div15 p{
+    clear: right;
+}
+.div8 p, .div12 p, .div16 p{
+    clear: both;
+}

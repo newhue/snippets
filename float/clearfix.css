@@ -1,0 +1,25 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;        
+}
+
+/* Used since height of parent div doesnt account if all children are float*/
+.clearfix{
+    width: 50%;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    border: 0.5rem solid saddlebrown;
+    box-shadow: 0 0 1rem lightslategray;
+}
+
+.clearfix img{
+    margin: 0.1rem;
+    float: left;
+}
+
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: table; /*Or display: block*/
+}
