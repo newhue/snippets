@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+    /* margin: 0; */    /*if set here, need to set for some elements*/
+    /* padding: 0; */
+}
+
+/* either set margin 0 as on top or for respective styles for div or p or any texts to be centered */
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.outerbox{
+    height: 300px;
+    width: 100%;
+    background: #c1d64b;
+    box-shadow: 0 0 1rem rgba(128, 128, 128, 0.5);
+    border-radius: .3rem;
+    margin-bottom: 50px;
+}
+
+.innerbox{
+    height: 150px;
+    width: 150px;
+    background: rgb(241, 134, 179);
+    border: 5px dashed maroon ;
+    border-radius: .3rem;
+}
+.innerbox p{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.outerbox1, .outerbox3, .outerbox4{
+    position: relative; /*any non static position*/
+}
+
+.innerbox1, .innerbox3, .innerbox4{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.outerbox2{
+    position: relative;
+}
+.innerbox2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.innerbox3, .innerbox4{
+    border: none;
+}
+
+.innerbox3{
+    display: table;
+}
+
+.innerbox3 p{
+    display: table-cell;
+    vertical-align: middle;
+    border: none;
+}
+
+.innerbox4 p{
+    margin: 0;
+    line-height: 150px; /* Equal to height of the containing div */
+}
+
+.outerbox5, .outerbox6{
+    height: auto;
+    padding: 100px 0 ;
+}
+
+.innerbox5{
+    margin: 0 auto;
+}
+
+.outerbox6 h3, .outerbox7 h3{
+    text-align: center;
+}
+
+.outerbox7{
+    position: relative;
+}
+
+.outerbox7 h3{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outerbox8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outerbox9{
+    display: grid;
+    place-items: center;
+}

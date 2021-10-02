@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  -webkit-box-shadow: 0 0 5px grey;
+          box-shadow: 0 0 5px grey;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  min-height: 80vh;
+  gap: 0.5rem;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  padding: 0.3rem;
+  width: 100vw;
+}
+
+.common-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.09rem;
+  -webkit-box-shadow: 0 0 15px 0 #00000073;
+          box-shadow: 0 0 15px 0 #00000073;
+  padding: 0.05rem;
+  border-radius: 2.5px;
+}
+
+.common-div h2, .common-div h1 {
+  text-shadow: 1px 1px 3px grey;
+}
+
+.div1 {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 /span 3;
+}
+
+.div2 {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-column: 4 /span 3;
+}
+
+.div3 {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 /span 2;
+}
+
+.div4 {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 /span 2;
+}
+
+.div5 {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5 /span 2;
+}
+
+.div1 {
+  background-color: gold;
+}
+
+.div2 {
+  background-color: greenyellow;
+}
+
+.div3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 /span 1;
+  background-color: coral;
+}
+
+.div4 {
+  background-color: darkcyan;
+}
+
+.div5 {
+  background-color: grey;
+}
+
+.div1 h2 {
+  text-align: center;
+  position: relative;
+}
+
+.div1 h2::before, .div1 h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  color: navy;
+  border-bottom: 5px solid navy;
+  width: 10vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.div1 h2::before {
+  top: -20px;
+}
+
+.div1 h2::after {
+  bottom: -20px;
+}
+
+.div2 h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.div2 h1::after {
+  content: '\f005';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 1.5rem;
+  width: calc(100vw - 80vw);
+  height: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -5%;
+  color: navy;
+  border-bottom: 5px solid navy;
+  text-shadow: 0px 2px 5px tomato;
+}
+
+@media (max-width: 800px) {
+  .div1 h2 {
+    text-align: center;
+    position: relative;
+  }
+  .div1 h2::before, .div1 h2::after {
+    width: 15vw;
+  }
+  .div2 h1 {
+    font-size: 2rem;
+  }
+  .div2 h1::after {
+    width: calc(100vw - 85vw);
+  }
+}
+
+.div3 h2 {
+  width: 100%;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  padding: 1rem;
+}
+
+[data-tooltip] {
+  text-align: center;
+  -webkit-box-shadow: 0 0 3px 0 white;
+          box-shadow: 0 0 3px 0 white;
+  background-color: black;
+  color: white;
+  text-shadow: 1px 1px 3px white;
+  border-radius: 5px;
+  position: relative;
+}
+
+.tooltipBasic {
+  color: lawngreen;
+}
+
+.tooltipBasic:hover::before {
+  content: attr(data-tooltip);
+  background-color: grey;
+  color: white;
+  border-radius: 3px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  right: 0;
+  -webkit-box-shadow: 0 0 3px blue;
+          box-shadow: 0 0 3px blue;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.div4 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.div4 h3 {
+  margin: 1rem 0;
+}
+
+.div4 div {
+  margin-top: 3rem;
+}
+
+.card {
+  width: 400px;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 0.4rem;
+  padding: 1rem;
+  color: white;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff1a2e94), color-stop(#ce125bc7), color-stop(#8b2e67a8), color-stop(#4d335294), to(#27272782));
+  background-image: linear-gradient(to right bottom, #ff1a2e94, #ce125bc7, #8b2e67a8, #4d335294, #27272782);
+  top: 0;
+  bottom: 0.4rem;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  main {
+    -ms-grid-rows: (1fr)[5];
+        grid-template-rows: repeat(5, 1fr);
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .common-div {
+    min-height: 40vh;
+  }
+  .div1, .div2, .div3, .div4, .div5 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 /span 1;
+  }
+  .div1 {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  .div2 {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+  }
+  .div3 {
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+  }
+  .div4 {
+    -ms-grid-row: 4;
+        grid-row-start: 4;
+  }
+  .div5 {
+    -ms-grid-row: 5;
+        grid-row-start: 5;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
+  .div1 h2 {
+    text-align: center;
+    position: relative;
+  }
+  .div1 h2::before, .div1 h2::after {
+    width: 20vw;
+  }
+  .div2 h1 {
+    font-size: 1.5rem;
+  }
+  .div2 h1::after {
+    width: calc(100vw - 70vw);
+  }
+}
+/*# sourceMappingURL=style2.css.map */

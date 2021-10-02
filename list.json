@@ -1,0 +1,19 @@
+{
+    "headers": [
+        "Link",
+        "Title",
+        "Type"
+    ],
+    "rows": [
+        [
+            "center-content/center.html",
+            "Center content",
+            "css"
+        ],
+        [
+            "./pseudo-elements/index.html",
+            "Pseudo elements",
+            "css"
+        ]
+    ]
+}

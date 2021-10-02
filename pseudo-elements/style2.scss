@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$width: 100vw;
+$width-lg: 10vw;
+$width-md: 15vw;
+$width-sm: 20vw;
+
+body {
+    overflow: auto;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 0 5px grey;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+main {
+    display: grid;
+    min-height: 80vh;
+    gap: 0.5rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0.3rem;
+    width: $width;
+}
+
+.common-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.09rem;
+    box-shadow: 0 0 15px 0 #00000073;
+    // margin: 0.2rem 0.2rem;
+    padding: 0.05rem;
+    border-radius: 2.5px;
+}
+
+.common-div {
+    h2, h1 {
+        text-shadow: 1px 1px 3px grey;
+    }
+}
+
+.div1 {
+    grid-row-start: 1;
+    grid-column: 1 /span 3
+}
+
+.div2 {
+    grid-row-start: 1;
+    grid-column: 4 /span 3
+}
+
+.div3 {
+    grid-row-start: 2;
+    grid-column: 1 /span 2
+}
+
+.div4 {
+    grid-row-start: 2;
+    grid-column: 3 /span 2
+}
+
+.div5{
+    grid-row-start: 2;
+    grid-column: 5 /span 2
+}
+
+.div1 {
+    background-color: gold;
+}
+
+.div2 {
+    background-color: greenyellow;
+}
+
+.div3 {
+    grid-row: 2 /span 1;
+    background-color: coral;
+}
+
+.div4 {
+    background-color: darkcyan;
+}
+
+.div5 {
+    background-color: grey;
+}
+
+.div1 {
+    h2 {
+        text-align: center;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            color: navy;
+            border-bottom: 5px solid navy;
+            width: $width-lg;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::before {
+            top: -20px;
+        }
+
+        &::after {
+            bottom: -20px;
+        }
+    }
+}
+
+.div2 {
+    h1 {
+        // position: relative;          //not even needed in this case
+        text-align: center;
+        font-size: 2.5rem;
+
+        &::after {
+            content: '\f005';
+            font-family: 'Font Awesome 5 Free';
+            font-size: 1.5rem;
+            width: calc(#{$width} - 80vw);
+            height: 10px;
+            display: block;
+            margin: 0 auto;
+            margin-top: -5%;
+            color: navy;
+            border-bottom: 5px solid navy;
+            text-shadow: 0px 2px 5px tomato;
+
+            // COOL EFFECT BELOW
+            // border-bottom-style: double;
+            // border-bottom-left-radius: 50%;
+            // border-bottom-right-radius: 50%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .div1 {
+        h2 {
+            text-align: center;
+            position: relative;
+
+            &::before,
+            &::after {
+                width: $width-md;
+            }
+        }
+    }
+
+    .div2 {
+        h1 {
+            font-size: 2rem;
+
+            &::after {
+                width: calc(#{$width} - 85vw);
+            }
+        }
+    }
+}
+
+.div3 {  
+    h2 {
+        width: 100%;
+        min-width: min-content;
+        padding: 1rem;
+    }
+}
+
+[data-tooltip] {
+    text-align: center;
+    box-shadow: 0 0 3px 0 white;
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px 3px white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.tooltipBasic {
+    color: lawngreen;
+    // background-color: red;
+}
+
+.tooltipBasic:hover::before {
+    content: attr(data-tooltip);
+    background-color: grey;
+    color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    right: 0;
+    box-shadow: 0 0 3px blue;
+    font-size: 1rem;
+    // width: max-content;
+    padding: 0.5rem;
+    // margin-top: 2px;
+    // padding: 2px;
+}
+
+// div4 style
+.div4 {
+    flex-direction: column-reverse;
+    
+    h3{
+        margin: 1rem 0;
+    }
+
+    div {
+        margin-top: 3rem;
+    }
+
+}
+
+// div5 style
+.card {
+    width: 400px;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 0.4rem;
+    padding: 1rem;
+    color: white;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    // background-image: linear-gradient(to right bottom, #ff1a2e, #ce125b, #8b2e67, #4d3352);
+    background-image: linear-gradient(to right bottom, #ff1a2e94, #ce125bc7, #8b2e67a8, #4d335294, #27272782);
+    top: 0;
+    bottom: 0.4rem;
+    left: 0;
+    right: 0;
+}
+
+// RESPONSIVE GRID
+@media (max-width: 600px) {
+    main {
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .common-div {
+        min-height: 40vh;
+    }
+
+    .div1, .div2, .div3, .div4, .div5{
+        grid-column: 1 /span 1
+    }
+
+    .div1 {
+        grid-row-start: 1;
+    }
+    
+    .div2 {
+        grid-row-start: 2;
+    }
+    
+    .div3 {
+        grid-row-start: 3;
+    }
+    
+    .div4 {
+        grid-row-start: 4;
+    }
+    
+    .div5{
+        grid-row-start: 5;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: none;
+    }
+
+    .div1 {
+        h2 {
+            text-align: center;
+            position: relative;
+
+            &::before,
+            &::after {
+                width: $width-sm;
+            }
+        }
+    }
+
+    .div2 {
+        h1 {
+            font-size: 1.5rem;
+
+            &::after {
+                width: calc(#{$width} - 70vw);
+            }
+        }
+    }
+}
