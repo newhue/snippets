@@ -1,19 +1,19 @@
 {
     "headers": [
         "Link",
-        "Title",
+        "Feature Link",
         "Type"
     ],
     "rows": [
         [
             "center-content/center.html",
             "Center content",
-            "css"
+            "CSS"
         ],
         [
-            "./pseudo-elements/index.html",
+            "./pseudo-elements/BeforeAfter.html",
             "Pseudo elements",
-            "css"
+            "CSS"
         ]
     ]
 }

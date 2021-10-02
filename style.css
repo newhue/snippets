@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 90vh;
+    margin: 5% auto;
+    position: relative;
+}
+
+.content-table{
+    position: absolute;
+    margin: auto;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-collapse: collapse;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.content-table tr{
+    border: 0.2rem solid olive;
+}
+
+.content-table th{
+    padding: 1rem;
+    font-size: 1.2rem;
+    background: #333;
+    color: goldenrod;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.content-table td{
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    color: teal;
+    /* background: rgba(128, 128, 0, 0.4); */
+    background: #333;
+}
+
+.content-table td a{
+    text-decoration: none;
+    position: relative;
+    padding: 0.3rem;
+    border-radius: 2px;
+    letter-spacing: 0.09rem;
+    color: darkgoldenrod;
+}
+
+.content-table td a:after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background: coral;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+    /* border-bottom: 2px solid brown; */
+}
+
+.content-table td a:hover:after{
+    width: 100%;
+}
+
+.content-table td a:visited{
+    color: darkgoldenrod;
+}
