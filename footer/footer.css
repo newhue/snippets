@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*,*::before,*::after{
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main{
+    position: relative;
+}
+
+
+header, footer{
+    text-align: center;
+}
+
+header{
+    background-color: coral;
+    margin-bottom: 2rem;
+}
+
+main{
+    margin: auto 2rem;
+    text-align: justify;
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+footer{
+    /* position: absolute; */ /* non sticky, wont stay at bottom*/
+    /* position: sticky; */ /* fixed to bottom only if content is full */
+     position: fixed;      /* no content or content will stay fixed */
+    height: 40px;
+    background-color: greenyellow;
+    bottom: 0;
+    width: 100%;
+    /* margin-top: 3rem; */
+    line-height: 2.5rem;
+}

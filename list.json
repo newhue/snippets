@@ -6,6 +6,16 @@
     ],
     "rows": [
         [
+            "./float/Float.html",
+            "Float",
+            "CSS"
+        ],
+        [
+            "./float/Clearfix.html",
+            "Clearfix",
+            "CSS"
+        ],
+        [
             "center-content/center.html",
             "Center content",
             "CSS"
@@ -16,9 +26,19 @@
             "CSS"
         ],
         [
-            "./float/Float.html",
-            "Float",
+            "./toggle-switch/index.html",
+            "toggle switch",
             "CSS"
+        ],
+        [
+            "./footer/footer3.html",
+            "Footer",
+            "CSS"
+        ],
+        [
+            "./text-effect/1/index.html",
+            "Text Effect 1",
+            "JavaScript"
         ]
     ]
 }

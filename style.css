@@ -7,9 +7,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    overflow: hidden;
+}
+
 .wrapper{
     width: 100%;
-    min-height: 90vh;
     margin: 5% auto;
     position: relative;
 }
@@ -17,17 +20,22 @@
 .content-table{
     position: absolute;
     margin: auto;
-    width: 50%;
+    width: 80%;
     left: 50%;
     transform: translateX(-50%);
     border-collapse: collapse;
     border-radius: 0 0 2px 2px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     text-align: center;
+    background: #333;
 }
 
-.content-table tr{
-    border: 0.2rem solid olive;
+.content-table thead{
+    border: 2px solid olive;
+}
+
+.content-table tbody tr{
+    border: 0.09rem solid olive;
 }
 
 .content-table th{
@@ -74,4 +82,86 @@
 
 .content-table td a:visited{
     color: darkgoldenrod;
+}
+
+.content-table{
+    border-bottom: 3px solid olive;
+}
+
+/* TABLE SCROLL */
+.content-table tbody, .content-table thead, .content-table tr, .content-table th, .content-table td{
+    display: block;
+}
+
+.content-table tbody{
+    height: 70vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.content-table tr th, .content-table  td, .content-table thead, .content-table tbody{
+    float: left;
+}
+
+.content-table thead, .content-table thead tr{
+    width: 100%;
+    min-height: 10vh;
+    height: auto;
+}
+
+.content-table tbody tr{
+    width: 100%;
+    /* height: 8.5vh; */
+    clear: both;
+    display: inline-block;
+}
+
+.content-table th:nth-child(1),
+.content-table td:nth-child(1){
+    width: 15%;
+}
+.content-table th:nth-child(2),
+.content-table td:nth-child(2){
+    width: 55%;
+}
+.content-table th:nth-child(3),
+.content-table td:nth-child(3){
+    width: 30%;
+}
+
+.content-table thead th, .content-table tbody{
+    width: 100%;
+    display: block;
+}
+
+tbody{
+    width: 100%;
+}
+
+.content-table tbody td{
+    word-wrap: break-word;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.content-table tbody::-webkit-scrollbar{
+	position: absolute;
+	right: 0;
+	width: 0.6rem;
+    background: grey;
+	/* border-radius: 10px; */
+    transition: 0.5s;
+}
+.content-table tbody::-webkit-scrollbar:hover{
+    /* background: #333; */
+}
+.content-table tbody::-webkit-scrollbar-thumb{
+	background: teal;
+	border-radius: 5px;
+	border: 1.5px solid wheat;
+    transition: 0.5s;
+}
+
+.content-table tbody::-webkit-scrollbar-thumb:hover{
+	background: olive;
 }

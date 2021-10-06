@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bgLightTheme: #A6D6D6;
+    --bgDarkTheme: #242424;
+    --bgSliderLightTheme: #87ceeb ;
+    --bgSliderDarkTheme: #242424;
+    --fontDarkTheme: #F4C7AB; 
+    --fontLightTheme: #420516; 
+    --iconDarkTheme: #F4F6F0; 
+    --iconLightTheme: darkorange; 
+    --fontsizeIcon: 1.5rem;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.wrapper{
+    height: 95vh;
+    width: 50%;
+    margin: 16px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0 grey;
+}
+
+/* Toggle Theme Functionality */
+.wrapper{
+    transition: all .5s ;
+}
+
+.wrapper.light {
+    color: var(--fontLightTheme);
+    background: var(--bgLightTheme);
+}
+
+/* .wrapper.light #toggle::before{ */
+.wrapper.light::before{
+    
+}
+
+.wrapper.dark{
+    color: var(--fontDarkTheme);
+    background: var(--bgDarkTheme) ; 
+}
+
+.wrapper #dark{
+    display: none
+    ;
+}
+
+.wrapper.dark::before{
+    
+}
+
+/* Toggle Switch css */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+}
+
+.switch #toggle{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch .slider{
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    border-radius: 20px;
+    background: var(--bgSliderDarkTheme);
+    transition:  .5s;   /*This is for slider bg change*/;
+}
+
+.switch .slider::before{
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    content: '\f186';
+    color: var(--iconDarkTheme);
+    font-size: var(--fontsizeIcon);
+    font-weight: 600;
+    display: block;
+    left: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 50%;
+    /* background: white; */
+    background: transparent;
+    transition:  .5s; /*This is for slider effect*/
+}
+
+.switch #toggle:checked + .slider{
+    background: var(--bgSliderLightTheme);
+}
+
+.switch #toggle:focus + .slider{
+    box-shadow: 0 0 15px grey;
+}
+
+.switch #toggle:checked + .slider::before{
+    content: '\f185';
+    background: transparent;
+    color: var(--iconLightTheme);
+    transform: translateX(30px);
+} 
+
+/* Toggle text slow effect remaining */
